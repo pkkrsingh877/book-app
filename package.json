@@ -1,0 +1,27 @@
+{
+  "name": "book-app",
+  "version": "1.0.0",
+  "description": "This app will hold information regarding books.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkkrsingh877/book-app.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Prabhat Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkkrsingh877/book-app/issues"
+  },
+  "homepage": "https://github.com/pkkrsingh877/book-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
+  }
+}
