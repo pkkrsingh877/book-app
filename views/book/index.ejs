@@ -1,4 +1,9 @@
+<%- layout('layouts/boilerplate') %>
+
 <h1>Book Page</h1>
 
-<a href="/books/add">Add a Book to the Database</a>
-<a href="/">Homepage</a>
+<% for( let index = 0; index < books.length; index++ ) { %>
+    id: <%= books[index].id %> <br>
+    Name of Book: <%= books[index].bookname %> <br>
+    Author's Name: <%= books[index].bookauthor %>
+<% } %>
