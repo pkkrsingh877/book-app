@@ -3,16 +3,19 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
+//middlewares
+app.use(express.urlencoded({ extended: false }));
+
 //ejs setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //routes setup
 const bookRoutes = require('./routes/book');
-app.use('/book', bookRoutes);
+app.use('/books', bookRoutes);
 
 app.get('/', (req, res) => {
-    res.send('index');
+    res.render('index');
 });
 
 app.listen(port, () => {
