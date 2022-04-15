@@ -1,9 +1,18 @@
 <%- layout('layouts/boilerplate') %>
 
 <h1>Book Page</h1>
-
+<section>
 <% for( let index = 0; index < books.length; index++ ) { %>
-    id: <%= books[index].id %> <br>
-    Name of Book: <%= books[index].bookname %> <br>
-    Author's Name: <%= books[index].bookauthor %>
+    <article class="card"  style="width: 28rem;">
+        <img src="<%= books[index].bookimage %>" class="card-img-top" alt="Broken Image">
+        <div class="card-body">
+            <h5 class="card-title">
+                <%= books[index].bookname %>
+            </h5>
+            <div class="card-subtitle text-muted text-small">
+                By <%= books[index].bookauthor %>
+            </div>
+        </div>
+    </article>
 <% } %>
+</section>

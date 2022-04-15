@@ -3,8 +3,10 @@ const router = express.Router();
 const path = require('path');
 const client = require('../models/database');
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     const { bookName, bookAuthor, bookImage } = req.body;
+    const id = Math.floor(Math.random() * 10000000);
+    await client.query('INSERT INTO books VALUES ($1, $2, $3, $4) RETURNING *', [id, bookName, bookAuthor, bookImage]);
     console.log(bookName, bookAuthor, bookImage);
     res.redirect('/books');
 });
