@@ -7,7 +7,7 @@
         <img src="<%= books[index].bookimage %>" class="card-img-top" alt="Broken Image">
         <div class="card-body">
             <h5 class="card-title">
-                <%= books[index].bookname %>
+                <a href="books/<%= books[index].id %>"><%= books[index].bookname %></a>
             </h5>
             <div class="card-subtitle text-muted text-small">
                 By <%= books[index].bookauthor %>

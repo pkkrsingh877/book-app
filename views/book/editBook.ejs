@@ -1,0 +1,17 @@
+<%- layout('layouts/boilerplate') %>
+
+<form action="/books/<%= book.id %>?_method=PATCH" method="POST">
+    <div>
+        <label for="bookName">Name of Book: </label>
+        <input type="text" id="bookName" name="bookName" value="<%= book.bookname %>">
+    </div>
+    <div>
+        <label for="bookAuthor">Name of Book's Author: </label>
+        <input type="text" id="bookAuthor" name="bookAuthor" value="<%= book.bookauthor %>">
+    </div>
+    <div>
+        <label for="bookImage">Book's Image Link: </label>
+        <input type="text" id="bookImage" name="bookImage" value="<%= book.bookimage %>">
+    </div>
+    <button type="submit">Update</button>
+</form>
